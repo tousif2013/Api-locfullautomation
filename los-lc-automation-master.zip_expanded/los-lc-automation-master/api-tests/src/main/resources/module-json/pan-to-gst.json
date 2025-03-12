@@ -1,0 +1,7 @@
+[
+  {
+    "panToGstVendorCode": "${vendorId}",
+    "verifyGstVendorCode": "${vendorId}",
+    "integrationType": "PAN_TO_GST_VERIFY_GST"
+  }
+]

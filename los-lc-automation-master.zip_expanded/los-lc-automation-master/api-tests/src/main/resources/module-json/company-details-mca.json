@@ -1,0 +1,35 @@
+[
+  {
+    "vendorCode": "${vendorId}",
+    "mcaDataType": "BASIC",
+    "integrationType": "MCA"
+  },
+  {
+    "integrationType": "RULES",
+    "rules": [
+      {
+        "id": "${ruleId}",
+        "ruleName": "${ruleName} (version: ${ruleVersion})",
+        "ruleType": "",
+        "baseId": "${ruleId}",
+        "name": "",
+        "version":1,
+        "selectedRuleId": "${ruleId}",
+        "selectedRuleEntry": {
+          "key": "${ruleId}",
+          "value": "${ruleName} (version: ${ruleVersion})",
+          "extraData": {
+            "version": 1,
+            "type": "${ruleType}"
+          }
+        },
+        "selectedRuleTypeId": "",
+        "selectedRuleTypeEntry": {
+          "key": "",
+          "value": ""
+        },
+        "type": "${ruleType}"
+      }
+    ]
+  }
+]

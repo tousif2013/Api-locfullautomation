@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="patternLayout">%d{yyyy-MM-dd HH:mm:ss.SSS} | [%X{testName}] | %-5level | %c{-3}.%M - %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${patternLayout}"/>
+        </Console>
+
+        <RollingFile name="RollingFileAppender"
+                     fileName="logs/debug.log"
+                     filePattern="logs/%d{yyyy-MM-dd}/debug-%d{HH-mm}-%i.log">
+            <PatternLayout pattern="${patternLayout}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+                <OnStartupTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <appender-ref ref="Console" level="info"/>
+            <appender-ref ref="RollingFileAppender" level="debug"/>
+        </Root>
+    </Loggers>
+</Configuration>

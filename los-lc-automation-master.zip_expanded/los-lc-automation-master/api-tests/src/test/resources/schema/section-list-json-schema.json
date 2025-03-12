@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "integer"
+    },
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "sectionCode": {
+              "type": "string"
+            },
+            "sectionName": {
+              "type": "string"
+            },
+            "sectionType": {
+              "type": ["string", "null"]
+            },
+            "isCustom": {
+              "type": "boolean"
+            },
+            "isEditable": {
+              "type": "boolean"
+            },
+            "sectionJson": {
+              "type": ["string", "null"]
+            }
+          },
+          "required": [
+            "id",
+            "sectionCode",
+            "sectionName",
+            "sectionType",
+            "isCustom",
+            "isEditable",
+            "sectionJson"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "code",
+    "message",
+    "timestamp",
+    "data"
+  ]
+}

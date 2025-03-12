@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Admin App" verbose="1">
+    <listeners>
+        <listener class-name="in.credable.automation.ui.listener.SuiteListener"/>
+        <listener class-name="in.credable.automation.ui.listener.TestListener"/>
+        <listener class-name="in.credable.automation.ui.listener.MethodInterceptor"/>
+    </listeners>
+
+    <test name="Program">
+        <classes>
+            <class name="in.credable.automation.ui.testcases.program.ProgramTest"/>
+        </classes>
+    </test>
+
+    <test name="Corporate">
+        <classes>
+            <class name="in.credable.automation.ui.testcases.corporate.CorporateTest"/>
+            <class name="in.credable.automation.ui.testcases.corporate.CorporatePageLanguageTest"/>
+        </classes>
+    </test>
+
+    <test name="Dealer">
+        <classes>
+            <class name="in.credable.automation.ui.testcases.dealer.DealerPageLanguageTest"/>
+            <class name="in.credable.automation.ui.testcases.dealer.DealerPageCurrencyTest"/>
+        </classes>
+    </test>
+
+    <test name="Vendor">
+        <classes>
+            <class name="in.credable.automation.ui.testcases.vendor.VendorPageLanguageTest"/>
+            <class name="in.credable.automation.ui.testcases.vendor.VendorPageCurrencyTest"/>
+        </classes>
+    </test>
+
+    <test name="Loan Application View">
+        <classes>
+            <class name="in.credable.automation.ui.testcases.loanapplication.LoanApplicationViewTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/module"
+  },
+  "definitions": {
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "moduleCode": {
+          "type": "string"
+        },
+        "moduleName": {
+          "type": "string"
+        },
+        "moduleType": {
+          "type": "string"
+        },
+        "moduleClass": {
+          "type": ["string", "null"]
+        },
+        "countryId": {
+          "type": "integer"
+        },
+        "frequentlyUsed": {
+          "type": "boolean"
+        },
+        "moduleJson": {
+          "type": ["string", "null"]
+        }
+      },
+      "required": [
+        "countryId",
+        "id",
+        "moduleClass",
+        "moduleCode",
+        "moduleJson",
+        "moduleName",
+        "moduleType",
+        "frequentlyUsed"
+      ],
+      "title": "module"
+    }
+  }
+}

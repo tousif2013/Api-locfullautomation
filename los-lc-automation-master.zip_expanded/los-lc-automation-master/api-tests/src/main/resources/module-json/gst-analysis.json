@@ -1,0 +1,48 @@
+[
+  {
+    "integrationType": "USER_SELECTED_GST_ORDER",
+    "vendorCode": "${vendorId}",
+    "gstForYears": 1,
+    "gstOtpTimer": 60,
+    "gstSubSections": {
+      "GSTR-1": [
+        "B2B",
+        "B2BA"
+      ],
+      "GSTR-2A": [
+        "B2B",
+        "B2BA"
+      ],
+      "GSTR-2B": []
+    },
+    "gstOrderType": "MULTIPLE"
+  },
+  {
+    "integrationType": "RULES",
+    "rules": [
+      {
+        "id": "${ruleId}",
+        "ruleName": "${ruleName} (version: ${ruleVersion})",
+        "ruleType": "",
+        "baseId": "${ruleId}",
+        "name": "",
+        "version": 1,
+        "selectedRuleId": "${ruleId}",
+        "selectedRuleEntry": {
+          "key": "${ruleId}",
+          "value": "${ruleName} (version: ${ruleVersion})",
+          "extraData": {
+            "version": 1,
+            "type": "${ruleType}"
+          }
+        },
+        "selectedRuleTypeId": "",
+        "selectedRuleTypeEntry": {
+          "key": "",
+          "value": ""
+        },
+        "type": "${ruleType}"
+      }
+    ]
+  }
+]
